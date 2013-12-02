@@ -1,23 +1,2 @@
 
-
-
-
-function(doc) {
-
-    var cine = doc.feed.theaterShowtimes[0].place.theater.name ;
-    doc.feed.theaterShowtimes[0].movieShowtimes.forEach(function(mst) {
-        mst.scr.forEach(function (scr) {
-            if (scr.d == "2011-12-09") {
-                var heures = Array();
-                scr.t.forEach(function (t) {
-                    heures.push(t.$);
-                });
-                emit(mst.onShow.movie.title, {"salle": cine, "heures": heures});
-            }
-        });
-    });
-}
-
-
-
 {"feed":{"updated":"2011-12-07","page":1,"count":1,"totalResults":9,"theaterShowtimes":[{"place":{"theater":{"code":"P2060","distance":0.000,"name":"CCC - Centre Culturel Cinématographique","address":"Salle Juliet Berto - Place Saint André  ","postalCode":"38000","city":"Grenoble","geoloc":{"lat":45.1823190,"long":5.7339870},"link":[{"rel":"aco:web","href":"http:\/\/www.allocine.fr\/seance\/salle_gen_csalle=P2060.html"}]}},"movieShowtimes":[{"preview":"false","releaseWeek":"false","onShow":{"movie":{"code":8883,"title":"Les Vikings","castingShort":{"directors":"Richard Fleischer","actors":"Kirk Douglas, Tony Curtis, Ernest Borgnine, Janet Leigh, James Donald"},"release":{"releaseDate":"2006-07-19"},"runtime":6840,"genre":[{"code":13001,"$":"Aventure"}],"poster":{"path":"\/medias\/nmedia\/00\/02\/56\/54\/aff.jpg","href":"http:\/\/images.allocine.fr\/medias\/nmedia\/00\/02\/56\/54\/aff.jpg"},"statistics":{"pressRating":4,"pressReviewCount":1,"userRating":3.450602,"userReviewCount":43,"userRatingCount":415}}},"version":{"original":"true","code":6002,"lang":6002,"$":"Anglais"},"display":"Séances du mercredi 14 décembre 2011 : 20:00 (film à 20:05)","scr":[{"d":"2011-12-14","t":[{"p":"5","$":"20:00"}]}]},{"preview":"false","releaseWeek":"false","onShow":{"movie":{"code":3967,"title":"Les Ensorcelés","castingShort":{"directors":"Vincente Minnelli","actors":"Kirk Douglas, Walter Pidgeon, Lana Turner, Barry Sullivan, Dick Powell"},"release":{"releaseDate":"2009-01-28"},"runtime":7080,"genre":[{"code":13008,"$":"Drame"}],"poster":{"path":"\/medias\/nmedia\/18\/35\/35\/53\/18463418.jpg","href":"http:\/\/images.allocine.fr\/medias\/nmedia\/18\/35\/35\/53\/18463418.jpg"},"trailer":{"code":124,"href":"http:\/\/www.allocine.fr\/blogvision\/124"},"statistics":{"userRating":3.637339,"userReviewCount":23,"userRatingCount":233}}},"version":{"original":"true","code":6002,"lang":6002,"$":"Anglais"},"display":"Séances du mercredi 7 décembre 2011 : 20:00 (film à 20:05)","scr":[{"d":"2011-12-07","t":[{"p":"5","$":"20:00"}]}]}]}]}}
